@@ -10,6 +10,7 @@
     "@types/koa-compress": "^2.0.6",
     "handlebars": "^4.0.6",
     "iridium": "^7.1.6",
+    "is-valid-path": "^0.1.1",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
     "koa-compress": "^2.0.0",

@@ -5,8 +5,10 @@ import * as bodyParser from 'koa-bodyparser';
 import * as logger from 'koa-logger';
 import * as views from 'koa-views';
 import router from './routes';
-
 const app = new Koa();
+// connect to the image_db
+
+
 
 const viewDir = path.resolve(__dirname, './views');
 app.use(views(viewDir, {
