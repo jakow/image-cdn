@@ -1,0 +1,43 @@
+{
+  "name": "image-cdn",
+  "version": "0.0.1",
+  "description": "Image CDN database to work with cloudfront",
+  "main": "build/index.js",
+  "repository": {},
+  "author": "Jakub Kowalczyk <j.a.kowalczyk1993@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/koa-compress": "^2.0.6",
+    "handlebars": "^4.0.6",
+    "iridium": "^7.1.6",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^2.0.0",
+    "koa-logger": "^2.0.1",
+    "koa-multer": "^1.0.1",
+    "koa-router": "next",
+    "koa-views": "^6.0.1",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/handlebars": "^4.0.32",
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/koa-logger": "^2.0.2",
+    "@types/koa-router": "^7.0.22",
+    "@types/koa-views": "^2.0.1",
+    "@types/mongoose": "^4.7.9",
+    "@types/node": "^7.0.12",
+    "@types/uuid": "^2.0.29",
+    "copy-webpack-plugin": "^4.0.1",
+    "file-loader": "^0.11.1",
+    "static-loader": "^0.1.8",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "scripts": {
+    "start": "node dist/index.js"
+  }
+}
