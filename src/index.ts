@@ -1,21 +1,18 @@
-import * as path from 'path';
-import * as Koa from 'koa';
-import * as compression from 'koa-compress';
-import * as bodyParser from 'koa-bodyparser';
-import * as logger from 'koa-logger';
-import * as views from 'koa-views';
-import router from './routes';
-const app = new Koa();
-// connect to the image_db
+import * as koa from "koa";
+import * as bodyParser from "koa-bodyparser";
+import * as compression from "koa-compress";
+import * as logger from "koa-logger";
+import * as path from "path";
+import router from "./routes";
+import * as views from "koa-views";
 
-
-
-const viewDir = path.resolve(__dirname, './views');
+const app = new koa();
+const viewDir = path.resolve(__dirname, "./views");
 app.use(views(viewDir, {
+  extension: "hbs",
     map: {
-      'hbs': 'handlebars'
+        hbs: "handlebars",
     },
-    extension: 'hbs'
 }));
 app.use(bodyParser());
 app.use(logger());
