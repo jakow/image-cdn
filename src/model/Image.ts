@@ -1,5 +1,5 @@
-import {Instance, Collection, Index, Property, ObjectID} from 'iridium';
-// const isValidPath: (x: string) => boolean = require('is-valid-path');
+import {Instance, Collection, Index, Property, ObjectID} from "iridium";
+// const isValidPath: (x: string) => boolean = require("is-valid-path");
 
 export interface ImageMetadata {
   width: number; // in px;
@@ -7,9 +7,9 @@ export interface ImageMetadata {
 }
 
 const metadataSchema = {
+  height: Number,
   width: Number,
-  height: Number
-}
+};
 
 export interface ImageDocument {
  _id?: string;
@@ -22,24 +22,21 @@ export interface ImageDocument {
 const mimeValidator = /^image\/[\w-.+]+$/;
 
 @Index({name : 1 })
-@Collection('images')
-// @Validate('isPath', str => this.assert(isValidPath(str)))
+@Collection("images")
+// @Validate("isPath", str => this.assert(isValidPath(str)))
 export default class Image extends Instance<ImageDocument, Image> implements ImageDocument {
-  @ObjectID _id: string;
-
+  @ObjectID
+  public _id: string;  // tslint:disable-line
   @Property(/^.+$/)
-  path: string;
+  public path: string;
 
   @Property(/^.+$/) // non empty string
-  extension: string;
-
-
+  public extension: string;
 
   @Property(mimeValidator)
-  mimetype: string;
+  public mimetype: string;
 
   @Property(metadataSchema, false)
-  metadata?: ImageMetadata;
-
+  public metadata?: ImageMetadata;
 
 }
